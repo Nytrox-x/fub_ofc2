@@ -33,13 +33,15 @@
     },
     "typeRoots": [
       "@types",
-      "./node_modules/@types"
+      "./node_modules/@types",
+      "./src/@types"
     ]
   },
   "exclude": [
     "assets",
     "jest.*",
     "prettier.*",
-    "tsconfig.*"
+    "tsconfig.*",
+    "coverage"
   ]
 }
