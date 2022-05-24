@@ -17,6 +17,11 @@ const dataSource = new DataSource({
   username: databaseConfig.DB_USER,
   password: databaseConfig.DB_PASSWORD,
   database: databaseConfig.DB_NAME,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
   ssl: true,
   synchronize: false,
   logging: true,
