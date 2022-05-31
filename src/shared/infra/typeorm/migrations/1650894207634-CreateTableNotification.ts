@@ -17,14 +17,9 @@ export class CreateTableNotification1650894207634
             generationStrategy: 'increment',
           },
           {
-            name: 'id_employee',
+            name: 'id_user',
             type: 'integer',
             isNullable: true,
-          },
-          {
-            name: 'id_employer',
-            type: 'integer',
-            isNullable: false,
           },
           {
             name: 'id_contract',
