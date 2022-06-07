@@ -43,6 +43,10 @@ export class CouponRepository implements ICouponRepository {
     await this.repository.softDelete(id);
   }
 
+  async findByContract(contractId: number): Promise<CouponEntity[]> {
+    return this.repository.find({ where: { contract: { id: contractId } } });
+  }
+
   async employeeConfirmJobDone(id: number): Promise<void> {
     await this.repository
       .createQueryBuilder('coupon')

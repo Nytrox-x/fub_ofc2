@@ -13,6 +13,8 @@ export interface ICouponRepository {
 
   softDelete(id: number): Promise<void>;
 
+  findByContract(contractId: number): Promise<ICouponDTO[]>;
+
   employeeConfirmJobDone(id: number): Promise<void>;
 
   employeeDisproveJobDone(id: number): Promise<void>;

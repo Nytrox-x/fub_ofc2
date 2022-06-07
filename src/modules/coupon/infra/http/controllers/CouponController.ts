@@ -12,6 +12,7 @@ import { EmployerFinishJobService } from '@modules/coupon/services/EmployerFinis
 import { EmployeeConfirmJobDoneService } from '@modules/coupon/services/EmployeeConfirmJobDoneService';
 import { EmployeeConfirmPaymentService } from '@modules/coupon/services/EmployeeConfirmPaymentService';
 import { EmployerRemoveEmployeeService } from '@modules/coupon/services/EmployerRemoveEmployeeService';
+import { FindCouponByContractIdService } from '@modules/coupon/services/FindCouponByContractIdService';
 import { EmployeeDisproveJobDoneService } from '@modules/coupon/services/EmployeeDisproveJobDoneService';
 
 @injectable()
@@ -93,6 +94,22 @@ export class CouponController {
       const { id } = request.params;
 
       response.json(await service.execute(Number(id)));
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  public async findByContract(
+    request: Request,
+    response: Response,
+    next: NextFunction
+  ): Promise<void> {
+    try {
+      const service = container.resolve(FindCouponByContractIdService);
+
+      const { contractId } = request.params;
+
+      response.json(await service.execute(Number(contractId)));
     } catch (err) {
       next(err);
     }

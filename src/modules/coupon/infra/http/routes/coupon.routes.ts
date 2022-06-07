@@ -28,6 +28,8 @@ couponRoutes.post(
 
 couponRoutes.get('', couponController.list);
 
+couponRoutes.get('/contract', couponController.findByContract);
+
 couponRoutes.get('/:id', couponController.findById);
 
 couponRoutes.put(
