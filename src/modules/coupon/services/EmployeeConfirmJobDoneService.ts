@@ -29,7 +29,7 @@ export class EmployeeConfirmJobDoneService {
 
     await notificationService.execute(
       coupon.contract,
-      `Your employee has confirmed that he finished the job in ${coupon.contract.title}`,
+      `Seu empregado confirmou que finalizou o bico ${coupon.contract.title}`,
       coupon.contract.employer.id as unknown as { id: number }
     );
   }

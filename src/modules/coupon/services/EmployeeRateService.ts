@@ -41,7 +41,7 @@ export class EmployeeRateService {
 
     await notificationService.execute(
       contract,
-      `The user ${contract.employee.name} has rated your job on the contract ${contract.title}`,
+      `O usuário ${contract.employee.name} avaliou sua recepção no bico ${contract.title}`,
       contract.employer.id as unknown as { id: number }
     );
   }

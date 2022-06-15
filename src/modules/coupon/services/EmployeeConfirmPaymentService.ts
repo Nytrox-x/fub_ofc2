@@ -33,7 +33,7 @@ export class EmployeeConfirmPaymentService {
 
     await notificationService.execute(
       coupon.contract,
-      `Your employee has confirmed that he received the payment about the ${coupon.contract.title} job, you can now finish the job`,
+      `Seu empregado confirmou que recebeu o pagamento no bico ${coupon.contract.title}, você agora pode finalizá-lo`,
       coupon.contract.employer.id as unknown as { id: number }
     );
   }

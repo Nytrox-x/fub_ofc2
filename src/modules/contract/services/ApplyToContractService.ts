@@ -39,7 +39,7 @@ export class ApplyToContractService {
 
     await notificationService.execute(
       contract,
-      `The user ${userInfo.name} has applied to your contract: ${contract.title}`,
+      `O usuário ${userInfo.name} se candidatou a seu bico: ${contract.title}`,
       contract.employer.id as unknown as { id: number }
     );
   }

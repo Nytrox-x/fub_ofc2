@@ -39,7 +39,7 @@ export class SelectEmployeeService {
 
     await notificationService.execute(
       contract,
-      `Congratulations! you have been selected as the employee of the job ${contract.title}, now wait for the employer ${contract.employer.name} enter in contact with you`,
+      `Parabéns! você foi selecionado como o empregado do bico ${contract.title}, agora espere o empregador ${contract.employer.name} entrar em contato com você`,
       contract.employee.id as unknown as { id: number }
     );
   }
